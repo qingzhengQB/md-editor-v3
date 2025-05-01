@@ -119,6 +119,7 @@ const Editor = defineComponent({
             updateModelValue={(value) => {
               ctx.emit('update:modelValue', value);
             }}
+            processContent={props.processContent}
             onChange={(value) => {
               props.onChange?.(value);
               ctx.emit('onChange', value);

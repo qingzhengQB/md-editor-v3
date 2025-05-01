@@ -255,6 +255,15 @@ export const editorProps = {
   ...mdPreviewProps,
 
   /**
+   * 魔改自定义事件，预览的 markdown 内容会被改函数处理后才会渲染
+   */
+  processContent: {
+    type: Function as PropType<(v: string) => string>,
+    default: (v: string) => {
+      return v;
+    }
+  },
+  /**
    * input回调事件
    */
   onSave: {
