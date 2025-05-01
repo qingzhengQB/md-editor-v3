@@ -8,6 +8,10 @@ export const contentPreviewProps = {
     type: String as PropType<string>,
     default: ''
   },
+  processContent: {
+    type: Function as PropType<(v: string) => string>,
+    default: () => {}
+  },
   onChange: {
     type: Function as PropType<(v: string) => void>,
     default: () => {}

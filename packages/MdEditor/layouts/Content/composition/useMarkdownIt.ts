@@ -205,7 +205,9 @@ const useMarkdownIt = (props: ContentPreviewProps, previewOnly: boolean) => {
   // 文章节点的key
   const key = ref(`_article-key_${randomId()}`);
 
-  const html = ref(props.sanitize(md.render(props.modelValue)));
+  const processedText = props.processContent(props.modelValue);
+
+  const html = ref(props.sanitize(md.render(processedText)));
 
   const updatedTodo = () => {
     // 触发异步的保存事件（html总是会比text后更新）
