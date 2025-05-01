@@ -46,6 +46,7 @@ const MdPreview = defineComponent({
         >
           <ContentPreview
             modelValue={props.modelValue}
+            processContent={props.processContent}
             onChange={(value) => {
               props.onChange?.(value);
               ctx.emit('onChange', value);
