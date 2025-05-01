@@ -1,4 +1,6 @@
-本项目 fork 自 md-editor-v3，提供了一些额外功能
+本项目 fork 自 md-editor-v3，提供了一些额外功能目前改动有：
+
+- MdEditor 增加 processContent 属性，接收参数类型 Function as PropType<(v: string) => string>，编辑器内的文本在经过 processContent 传入函数处理后才会渲染处理后的 markdown 文本，同时编辑器内容不受影响
 
 # 🎄 md-editor-v3
 
