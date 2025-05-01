@@ -237,7 +237,10 @@ const useMarkdownIt = (props: ContentPreviewProps, previewOnly: boolean) => {
   const markHtml = () => {
     // 清理历史标题
     headsRef.value = [];
-    html.value = props.sanitize(md.render(props.modelValue));
+
+    // 修改位置：根据传入参数处理markdown文本 ///////////////////////////////////////////////////////////////////////////////////
+    const processedText = props.processContent(props.modelValue);
+    html.value = props.sanitize(md.render(processedText));
     updatedTodo();
   };
 
