@@ -67,6 +67,7 @@ export default defineComponent({
                 html.value = html_;
                 props.onHtmlChanged(html_);
               }}
+              processContent={props.processContent}
               onGetCatalog={props.onGetCatalog}
               mdHeadingId={props.mdHeadingId}
               noMermaid={props.noMermaid}

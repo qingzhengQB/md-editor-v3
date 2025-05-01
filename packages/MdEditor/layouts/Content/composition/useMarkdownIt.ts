@@ -205,6 +205,7 @@ const useMarkdownIt = (props: ContentPreviewProps, previewOnly: boolean) => {
   // 文章节点的key
   const key = ref(`_article-key_${randomId()}`);
 
+  // 修改位置：根据传入参数处理markdown文本 ///////////////////////////////////////////////////////////////////////////////////
   const processedText = props.processContent(props.modelValue);
 
   const html = ref(props.sanitize(md.render(processedText)));
